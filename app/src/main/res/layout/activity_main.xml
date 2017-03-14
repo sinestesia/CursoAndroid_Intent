@@ -11,8 +11,52 @@
     tools:context="es.pamp.cursoandroid01.MainActivity">
 
     <TextView
+        android:text="Usuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hola_mundo"
-        android:textSize="36sp" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="46dp"
+        android:id="@+id/textView3" />
+
+    <TextView
+        android:text="Contraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginTop="48dp"
+        android:id="@+id/textView4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView4"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/editText3" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/editText3"
+        android:layout_alignStart="@+id/editText3"
+        android:layout_marginTop="20dp"
+        android:id="@+id/editText4" />
+
+    <Button
+        android:text="Acceder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_below="@+id/editText4"
+        android:layout_alignEnd="@+id/editText4"
+        android:layout_marginEnd="33dp"
+        android:layout_marginTop="47dp" />
 </RelativeLayout>
