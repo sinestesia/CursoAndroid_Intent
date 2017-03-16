@@ -1,15 +1,14 @@
 package es.pamp.cursoandroid01;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import modelo.CocheElectrico;
-import modelo.FlotaElectricos;
-import modelo.FlotaGasolina;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,16 +17,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Log.d("Coche", "Estoy aquí");
+        Button buttonPrueba =(Button) findViewById(R.id.button2);
+        buttonPrueba.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Main2Activity.class);
 
-        CocheElectrico cocheElectrico = new CocheElectrico("2325AAX",2000,"Tesla",5,6000);
-        cocheElectrico.alquilar();
+                String usuario =  ((EditText)findViewById(R.id.editText3)).getText().toString();
+                String pass = ((EditText)findViewById(R.id.editText4)).getText().toString();
 
-        FlotaElectricos flotaElectricos = new FlotaElectricos();
-        flotaElectricos.crearFlota();
+                if (!usuario.equals("") && !pass.equals("") && usuario.equals(pass)){
+                   
+                    startActivity(i);
+                    finish();
+                }else{
+                    Toast toast = Toast.makeText(getApplicationContext(), "Contraseña incorrecta", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
 
-        FlotaGasolina flotaGasolina = new FlotaGasolina();
-        flotaGasolina.crearFlota();
+            }
+        });
+
+
 
 
 
