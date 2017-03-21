@@ -4,4 +4,9 @@
     <string name="Contraseña">Contraseña:</string>
     <string name="Acceder">Acceder</string>
     <string name="mensajeActivity2">Main Activity 2</string>
+    <string name="registro">Registro</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellido</string>
+    <string name="direccion">Dirección</string>
+    <string name="email">E-mail</string>
 </resources>

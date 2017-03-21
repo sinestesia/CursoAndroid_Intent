@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 String pass = ((EditText)findViewById(R.id.editText4)).getText().toString();
 
                 if (!usuario.equals("") && !pass.equals("") && usuario.equals(pass)){
-                   
+
                     startActivity(i);
                     finish();
                 }else{
@@ -37,6 +37,19 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        Button botonRegistro =(Button) findViewById(R.id.botonRegistro);
+        botonRegistro.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
+                                                Intent i = new Intent(getApplicationContext(), RegistroActivity.class);
+                                                startActivity(i);
+                                                finish();
+                                            }
+                                        }
+
+
+
+        );
 
 
 
